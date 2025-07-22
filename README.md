@@ -12,3 +12,4 @@ Calculates the average maximum speed of trains in any given country based on OSM
 ## Notes
 The script does not care for how long any given route is. It also ignores nodes. To deliver accurate numbers, it would have to consider the route length. For example, I'm assuming slower side tracks are given a higher weight in the average / median calculations as there's more of them as opposed to high speed main tracks.
 Feel free to create a pull request with that change included.
+Map data from [Open Street Map](https://www.openstreetmap.org/copyright/en)
