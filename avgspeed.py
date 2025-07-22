@@ -1,10 +1,25 @@
 # You need to create resultdata.json before running
 
+# OVERPASS COMMAND
+# [out:json][timeout:600];
+# area["ISO3166-1"="BY"][admin_level=2]->.pt;
+
+# way
+#   ["railway"="rail"]
+#   ["maxspeed"]
+#   (area.pt);
+  
+# out body;
+# >;
+# out skel qt;
+
 import json, statistics
+
+filelink = "C:\\Users\\YOUR USER\\Downloads\\export.json"
+outfile = "C:\\Users\\YOUR USER\\Downloads\\resultdata.json"
 
 # Read the file
 print("Loading Data...")
-filelink = "C:\\Users\\YOUR USER\\Downloads\\export.json"
 
 with open(filelink, "r", encoding="utf-8") as f:
     rawdata = f.read()
@@ -72,7 +87,6 @@ final_stats["total"] = {
 
 # Write data
 print("Writing Data...")
-outfile = "C:\\Users\\YOUR USER\\Downloads\\resultdata.json"
 with open(outfile, "w", encoding="utf-8") as f:
     json.dump(final_stats, f, indent=4)
 
